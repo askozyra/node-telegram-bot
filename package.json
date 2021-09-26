@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.0.20",
+    "dotenv": "^10.0.0",
+    "ffmpeg": "^0.0.4",
+    "ffmpeg-static": "^4.4.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "googleapis": "^80.1.0",
+    "node-telegram-bot-api": "^0.53.0",
+    "youtube-dl-exec": "^1.2.4"
+  },
+  "type": "module"
+}

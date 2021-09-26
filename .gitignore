@@ -1,0 +1,16 @@
+# Ignore node_modules
+node_modules/
+
+# Ignore confidential data
+/credentials.json
+/.env
+/src/users.json
+
+# Ignore tmp files
+temp/
+
+# Ignore source files
+src/avatars
+src/img
+src/videos
+
