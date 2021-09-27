@@ -128,7 +128,7 @@ Email: khnu2019@gmail.com
 
 LinkedIn: [askozyra](https://linkedin.com/in/askozyra)
 
-Project Link: [https://github.com/askozyra/yt_viewer][project-url]
+Project Link: [https://github.com/askozyra/node-telegram-bot][project-url]
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
