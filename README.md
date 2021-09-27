@@ -10,9 +10,9 @@
     <br/>
     <br/>
     <br/>
-    <a href="https://github.com/askozyra/yt_viewer/issues">Report Bug</a>
+    <a href="https://github.com/askozyra/node-telegram-bot/issues">Report Bug</a>
     •
-  <a href="https://github.com/askozyra/yt_viewer/pulls">Request Feature</a>
+  <a href="https://github.com/askozyra/node-telegram-bot/pulls">Request Feature</a>
   </p>
 </p>
 
