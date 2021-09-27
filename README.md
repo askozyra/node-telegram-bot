@@ -77,7 +77,7 @@ Get the project:
 
 2. Get a Telegram Bot API Token using [@BotFather](https://t.me/botfather)
 
-3. Install composer dependencies:
+3. Install npm dependencies:
   ```sh
   npm install
   ```
