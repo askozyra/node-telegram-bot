@@ -93,7 +93,7 @@ Get the project:
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Full list of the bot's commands you can see in the file command_palette.js.
+Full list of the bot's commands you can see in the file `command_palette.js`.
 
 To work with the video-to-audio converter, you need to install FFmpeg.
 
