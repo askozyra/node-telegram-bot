@@ -7,6 +7,7 @@ import youtubedl from "youtube-dl-exec";
 import request from "request";
 import ffmpeg from "fluent-ffmpeg";
 import ffmpegPath from "@ffmpeg-installer/ffmpeg";
+import { config } from "dotenv";
 
 ffmpeg.setFfmpegPath(ffmpegPath.path);
 
@@ -31,6 +32,18 @@ function lytdybr(str){
     }
 
     return res;
+}
+
+function createRegexCmd(cmd) {
+    let regexp = "\/" + cmd + "(?:" + configs.bot_name + "){0,1}";
+    
+    delete arguments[0];
+    Object.keys(arguments).forEach(key => {
+        regexp += "\\s+?" + arguments[key];
+    });
+    
+    // return regexp;
+    return new RegExp(regexp);
 }
 
 function textPrettier(str){
@@ -175,4 +188,4 @@ function audioByName(msg, match){
     });
 }
 
-export {isRegistered, saveChanges, textPrettier, findVideoYT, extractAudioYT, audioByName, lytdybr};
+export { isRegistered, saveChanges, textPrettier, findVideoYT, extractAudioYT, audioByName, lytdybr, createRegexCmd };

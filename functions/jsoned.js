@@ -1,8 +1,8 @@
 import { bot, users } from "../config.js";
-import { saveChanges } from "./functions.js";
+import { saveChanges, createRegexCmd } from "./functions.js";
 import { default as request } from "request";
 
-bot.onText(/^\/jsoned\/login (.*?) (.*?)$/, (msg, match) => {
+bot.onText(createRegexCmd("jsoned\/login", "(.*?)", "(.*?)$"), (msg, match) => {
   try {
     let id = msg.chat.id;
     const LOGIN = match[1];
@@ -18,7 +18,7 @@ bot.onText(/^\/jsoned\/login (.*?) (.*?)$/, (msg, match) => {
 });
 
 // jsoned/api/$type/$id ($method) ({$data})
-bot.onText(/^\/jsoned\/api\/(.*?)\/(.*?) \((.+?)\) \(({\s*?.*?\s*?})\)$/, (msg, match) => {
+bot.onText(createRegexCmd("jsoned\/api\/(.*?)\/(.*?) \((.+?)\) \(({\s*?.*?\s*?})\)$"), (msg, match) => {
   try{
     const chatId = msg.chat.id;
     const type   = match[1];

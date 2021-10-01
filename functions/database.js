@@ -1,7 +1,7 @@
-import { isRegistered, saveChanges } from "./functions.js";
+import { isRegistered, saveChanges, createRegexCmd } from "./functions.js";
 import { users, bot } from "../config.js";
 
-bot.onText(/^\/register_this_chat *?(?:.*?) *?(.+?)$/, (msg, match) => {
+bot.onText(createRegexCmd("register_this_chat", "(.+?)$"), (msg, match) => {
     match[1] == "Administrator" ? match[1] = "someUser" : match[1];
     
     let id = msg.chat.id;
@@ -18,7 +18,7 @@ bot.onText(/^\/register_this_chat *?(?:.*?) *?(.+?)$/, (msg, match) => {
     }
 });
 
-bot.onText(/^\/rename_this_chat *?(?:\@[a-zA-Z0-9]+?)*? +?(.+?)$/, (msg, match) => {
+bot.onText(createRegexCmd("rename_this_chat", "(.+?)"), (msg, match) => {
     let id = msg.chat.id;
     let newName = match[1];
 
@@ -32,7 +32,7 @@ bot.onText(/^\/rename_this_chat *?(?:\@[a-zA-Z0-9]+?)*? +?(.+?)$/, (msg, match) 
     }
 });
 
-bot.onText(/^\/remove_this_chat/, (msg) => {
+bot.onText(createRegexCmd("remove_this_chat"), (msg) => {
     let id = msg.chat.id;
 
     if(isRegistered(id)){
@@ -45,7 +45,7 @@ bot.onText(/^\/remove_this_chat/, (msg) => {
     }
 });
 
-bot.onText(/^\/name_of_this_chat/, (msg) => {
+bot.onText(createRegexCmd("name_of_this_chat"), (msg) => {
     let id = msg.chat.id;
     
     if(isRegistered(id)){

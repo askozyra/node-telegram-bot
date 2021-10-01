@@ -1,7 +1,8 @@
 import {bot} from "../config.js";
 import * as frames from './materials/animation/frames.js';
+import { createRegexCmd } from "./functions.js";
 
-bot.onText(/^\/anim.+?(\d+)/, (msg, match) => {
+bot.onText(createRegexCmd("anim", "\\d+?"), (msg, match) => {
     bot.sendMessage(msg.chat.id, "anim" + match[1]).then((msg) => {
         const chatId = msg.chat.id;
         const messageId = msg.message_id;
