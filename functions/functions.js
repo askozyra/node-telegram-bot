@@ -42,7 +42,6 @@ function createRegexCmd(cmd) {
         regexp += "\\s+?" + arguments[key];
     });
     
-    // return regexp;
     return new RegExp(regexp);
 }
 
